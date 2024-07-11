@@ -1,0 +1,49 @@
+{
+  "name": "@Tsiory12/react-form-generator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@Tsiory12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@testing-library/react": "^16.0.0",
+    "bootstrap": "^5.3.3",
+    "jsdom": "^24.1.0",
+    "quill": "^2.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-quill": "^2.0.0",
+    "vitest": "^1.6.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.5",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "vite": "^5.2.0"
+  },
+  "description": "1. **Cloner le dépôt :**\r     ```sh\r     git clone https://gitlab.arkeup.com/arkeup/projets/BOSS/poc/react-form-generator.git\r     cd <votre-repertoire-depot>\r     ```",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

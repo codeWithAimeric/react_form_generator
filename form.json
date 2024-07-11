@@ -1,0 +1,218 @@
+{
+  "title": "Inscription",
+  "description": "Veuillez remplir ce formulaire pour créer votre compte.",
+  "submitButton": "S'inscrire",
+  "resetButton": "Réinitialiser",
+  "class": "",
+  "fields": [
+    {
+      "name": "firstName",
+      "label": "Prénom",
+      "type": "text",
+      "required": true,
+      "placeholder": "John",
+      "classes": {
+        "group": "mb-3",
+        "label": "form-label",
+        "input": "form-control"
+      }
+    },
+    {
+      "name": "lastName",
+      "label": "Nom",
+      "type": "text",
+      "required": true,
+      "placeholder": "Doe",
+      "classes": {
+        "group": "mb-3",
+        "label": "form-label",
+        "input": "form-control"
+      }
+    },
+    {
+      "name": "gender",
+      "label": "Genre",
+      "type": "radio",
+      "values": [
+        {
+          "label": "test",
+          "value": "value"
+        },
+        {
+          "label": "test 2",
+          "value": "value test"
+        },
+        {
+          "label": "test 3",
+          "value": "value test"
+        },
+        {
+          "label": "test 3",
+          "value": "value test"
+
+        }
+      ],
+      "required": true,
+      "classes": {
+        "group": "mb-3",
+        "label": "",
+        "values": {
+          "blockContainer": "form-check form-check-inline",
+          "label": "ms-2 form-check-label",
+          "input": "ms-3 form-check-input"
+        }
+      }
+    },
+    {
+      "name": "age",
+      "label": "Âge",
+      "type": "number",
+      "required": true,
+      "placeholder": "18",
+      "validations": [
+        {
+          "type": "min",
+          "value": 18,
+          "message": "Vous devez avoir au moins 18 ans."
+        },
+        {
+          "type": "max",
+          "value": 65,
+          "message": "L'âge doit être inférieur ou égal à 65 ans."
+        }
+      ],
+      "classes": {
+        "group": "mb-3",
+        "label": "form-label",
+        "input": "form-control"
+      }
+    },
+    {
+      "name": "birthdate",
+      "label": "Date de naissance",
+      "type": "date",
+      "required": true,
+      "validations": [
+        {
+          "type": "min",
+          "value": "1900-01-01",
+          "message": "La date doit être après le 1er janvier 1900."
+        },
+        {
+          "type": "max",
+          "value": "2024-12-31",
+          "message": "La date doit être avant le 31 décembre 2024."
+        }
+      ],
+      "classes": {
+        "group": "mb-3",
+        "label": "form-label",
+        "input": "form-control"
+      }
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "type": "email",
+      "required": true,
+      "placeholder": "john.doe@example.com",
+      "validations": [
+        {
+          "type": "email",
+          "message": "Veuillez saisir un email valide."
+        }
+      ],
+      "classes": {
+        "group": "mb-3",
+        "label": "form-label",
+        "input": "form-control"
+      }
+    },
+    {
+      "name": "password",
+      "label": "Mot de passe",
+      "type": "password",
+      "required": true,
+      "validations": [
+        {
+          "type": "minLength",
+          "value": 8,
+          "message": "Le mot de passe doit faire au moins 8 caractères."
+        },
+        {
+          "type":"regex",
+          "value":"^(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*])[A-Za-z\\d!@#$%^&*]{8,}$",
+          "message" : "Le mot de passe doit contenir au moins une majuscule, un chiffre, un caractère spécial (!@#$%^&*) et être composé de 8 caractères minimum."
+        }
+      ],
+      "classes": {
+        "group": "mb-3",
+        "label": "form-label",
+        "input": "form-control"
+      }
+    },
+    {
+      "name":"upload",
+      "label":"Téléverser une image",
+      "type": "file",
+      "fileFormat": "image",
+      "required": false,
+      "validations":[
+        {
+          "type": "fileSize",
+          "maxSize": 8,
+          "message":"Le fichier ne devrait pas dépasser 8MB"
+        },
+        {
+          "type": "fileFormat",
+          "formats": ["image/jpg", "image/jpeg", "image/gif", "image/png"],
+          "message": "L'image devrait être au format jpg, jpeg, gif ou png"
+        }
+      ],
+      "classes": {
+        "group": "mb-3 form-group",
+        "label": "test form-label",
+        "input": "form-control"
+      }
+    },
+    {
+      "name": "freeVersion",
+      "label": "Version Gratuite",
+      "type": "select",
+      "values": [
+        {
+          "label": "Oui",
+          "value": "1"
+        },
+        {
+          "label": "Non",
+          "value": "O"
+        }
+      ],
+      "required": true,
+      "validations": [
+        {
+
+        }
+      ],
+      "classes": {
+        "group": "mb-3",
+        "label": "form-label",
+        "input": "form-select"
+      }
+    },
+    {
+      "name": "text-editor",
+      "label": "Editeur de texte",
+      "type": "editor",
+      "required": false,
+      "validations":[
+        {
+          "type": "min",
+          "value": 15,
+          "message": "La description doit avoir au moins 15 caractères"
+        }
+      ]
+    }
+  ]
+}
